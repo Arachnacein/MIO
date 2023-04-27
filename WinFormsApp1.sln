@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MIO_1", "WinFormsApp1\MIO_1.csproj", "{64AEE616-B8CC-4144-96B7-DC7FB9287B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MIO", "WinFormsApp1\MIO.csproj", "{64AEE616-B8CC-4144-96B7-DC7FB9287B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
