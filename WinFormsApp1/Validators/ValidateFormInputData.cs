@@ -1,4 +1,4 @@
-﻿namespace MIO_1.Validators
+﻿namespace WinFormsApp1.Validators
 {
     internal class ValidateFormInputData
     {
@@ -21,5 +21,22 @@
             }
             return true;
         }
+
+        public bool ValidatePropability(double propability)
+        {
+            if (propability < 0d)
+            {
+                MessageBox.Show("Prawdomopobieństwo nie może być mniejsze niż 0!", "Error");
+                return false;
+            }           
+            if (propability > 1d)
+            {
+                MessageBox.Show("Prawdomopobieństwo nie może być większe niż 1!", "Error");
+                return false;
+            }
+            return true;
+        }
+        
+
     }
 }

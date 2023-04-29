@@ -1,7 +1,7 @@
-﻿using MIO.Logic.Interfaces;
+﻿using WinFormsApp1.Logic.Interfaces;
 using WinFormsApp1.Models;
 
-namespace MIO.Logic
+namespace WinFormsApp1.Logic.Classes
 {
     internal class DataOperations_Ep2 : IDataOperations_Ep2
     {

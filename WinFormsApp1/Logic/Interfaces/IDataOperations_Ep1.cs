@@ -1,7 +1,7 @@
-﻿using WinFormsApp1.Logic;
+﻿using WinFormsApp1.Logic.Classes;
 using WinFormsApp1.Models;
 
-namespace MIO.Logic.Interfaces
+namespace WinFormsApp1.Logic.Interfaces
 {
     public interface IDataOperations_Ep1
     {

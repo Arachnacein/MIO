@@ -40,15 +40,20 @@ namespace WinFormsApp1
             Precision = new ComboBox();
             PopulationSize = new NumericUpDown();
             label4 = new Label();
-            label5 = new Label();
             Bytes = new Label();
             dataGridView1 = new DataGridView();
+            modelNewPersonBindingSource2 = new BindingSource(components);
+            mutationPositionsBindingSource = new BindingSource(components);
+            modelNewPersonBindingSource1 = new BindingSource(components);
+            modelNewPersonBindingSource = new BindingSource(components);
+            resultBindingSource = new BindingSource(components);
+            modelOutputBindingSource6 = new BindingSource(components);
+            modelOutputBindingSource5 = new BindingSource(components);
             modelOutputBindingSource4 = new BindingSource(components);
             modelOutputBindingSource3 = new BindingSource(components);
             modelOutputBindingSource2 = new BindingSource(components);
             modelOutputBindingSource1 = new BindingSource(components);
             modelOutputBindingSource = new BindingSource(components);
-            resultBindingSource = new BindingSource(components);
             xREAL1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             xINT1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             numberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -60,31 +65,45 @@ namespace WinFormsApp1
             numberDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             xREAL1DataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             xINT1DataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            Number = new DataGridViewTextBoxColumn();
-            X_REAL1 = new DataGridViewTextBoxColumn();
-            functionXDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            Function_G = new DataGridViewTextBoxColumn();
-            Function_P = new DataGridViewTextBoxColumn();
-            Q = new DataGridViewTextBoxColumn();
-            R = new DataGridViewTextBoxColumn();
-            Selection = new DataGridViewTextBoxColumn();
+            crossPropability = new ComboBox();
+            mutationPropability = new ComboBox();
+            label5 = new Label();
+            label6 = new Label();
+            Nr = new DataGridViewTextBoxColumn();
+            X_REAL = new DataGridViewTextBoxColumn();
+            X_BIN = new DataGridViewTextBoxColumn();
+            X_Parents = new DataGridViewTextBoxColumn();
+            CutPosition = new DataGridViewTextBoxColumn();
+            ChildrenPopulation = new DataGridViewTextBoxColumn();
+            X_Crossed_Population = new DataGridViewTextBoxColumn();
+            MutationPositions = new DataGridViewTextBoxColumn();
+            X_Mutated_Population = new DataGridViewTextBoxColumn();
+            X_REAL_Mutated_Population = new DataGridViewTextBoxColumn();
+            functionFDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)A).BeginInit();
             ((System.ComponentModel.ISupportInitialize)B).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PopulationSize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mutationPositionsBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)resultBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)resultBindingSource).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(679, 25);
+            button1.Location = new Point(1094, 29);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(107, 38);
             button1.TabIndex = 0;
             button1.Text = "Start";
             button1.UseVisualStyleBackColor = true;
@@ -93,89 +112,89 @@ namespace WinFormsApp1
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(58, 9);
+            label1.Location = new Point(83, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(13, 15);
+            label1.Size = new Size(21, 25);
             label1.TabIndex = 2;
             label1.Text = "a";
             // 
             // A
             // 
-            A.Location = new Point(12, 27);
+            A.Location = new Point(17, 45);
+            A.Margin = new Padding(4, 5, 4, 5);
             A.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             A.Name = "A";
-            A.Size = new Size(120, 23);
+            A.Size = new Size(171, 31);
             A.TabIndex = 3;
             A.Value = new decimal(new int[] { 4, 0, 0, int.MinValue });
             // 
             // B
             // 
-            B.Location = new Point(138, 27);
+            B.Location = new Point(197, 45);
+            B.Margin = new Padding(4, 5, 4, 5);
             B.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             B.Name = "B";
-            B.Size = new Size(120, 23);
+            B.Size = new Size(171, 31);
             B.TabIndex = 5;
             B.Value = new decimal(new int[] { 12, 0, 0, 0 });
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(185, 9);
+            label2.Location = new Point(264, 15);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(14, 15);
+            label2.Size = new Size(23, 25);
             label2.TabIndex = 4;
             label2.Text = "b";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(312, 9);
+            label3.Location = new Point(446, 15);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(14, 15);
+            label3.Size = new Size(23, 25);
             label3.TabIndex = 6;
             label3.Text = "d";
             // 
             // Precision
             // 
             Precision.FormattingEnabled = true;
-            Precision.Items.AddRange(new object[] { "0,1", "0,01", "0,001", "0,0001", "0,00001", "0,000001" });
-            Precision.Location = new Point(264, 27);
+            Precision.Items.AddRange(new object[] { "0,1", "0,01", "0,001", "0,0001" });
+            Precision.Location = new Point(377, 45);
+            Precision.Margin = new Padding(4, 5, 4, 5);
             Precision.Name = "Precision";
-            Precision.Size = new Size(121, 23);
+            Precision.Size = new Size(171, 33);
             Precision.TabIndex = 7;
             // 
             // PopulationSize
             // 
-            PopulationSize.Location = new Point(391, 27);
+            PopulationSize.Location = new Point(559, 45);
+            PopulationSize.Margin = new Padding(4, 5, 4, 5);
             PopulationSize.Name = "PopulationSize";
-            PopulationSize.Size = new Size(120, 23);
+            PopulationSize.Size = new Size(171, 31);
             PopulationSize.TabIndex = 9;
             PopulationSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(442, 9);
+            label4.Location = new Point(631, 15);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(16, 15);
+            label4.Size = new Size(25, 25);
             label4.TabIndex = 8;
             label4.Text = "N";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(575, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(10, 15);
-            label5.TabIndex = 10;
-            label5.Text = "l";
             // 
             // Bytes
             // 
             Bytes.AutoSize = true;
-            Bytes.Location = new Point(520, 30);
+            Bytes.Location = new Point(743, 50);
+            Bytes.Margin = new Padding(4, 0, 4, 0);
             Bytes.Name = "Bytes";
-            Bytes.Size = new Size(0, 15);
+            Bytes.Size = new Size(0, 25);
             Bytes.TabIndex = 11;
             // 
             // dataGridView1
@@ -183,15 +202,45 @@ namespace WinFormsApp1
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Number, X_REAL1, functionXDataGridViewTextBoxColumn, Function_G, Function_P, Q, R, Selection });
-            dataGridView1.DataSource = modelOutputBindingSource4;
-            dataGridView1.Location = new Point(12, 56);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nr, X_REAL, X_BIN, X_Parents, CutPosition, ChildrenPopulation, X_Crossed_Population, MutationPositions, X_Mutated_Population, X_REAL_Mutated_Population, functionFDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = modelNewPersonBindingSource2;
+            dataGridView1.Location = new Point(17, 93);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.ScrollBars = ScrollBars.Vertical;
-            dataGridView1.Size = new Size(1059, 382);
+            dataGridView1.Size = new Size(1650, 637);
             dataGridView1.TabIndex = 12;
+            // 
+            // modelNewPersonBindingSource2
+            // 
+            modelNewPersonBindingSource2.DataSource = typeof(ModelNewPerson);
+            // 
+            // mutationPositionsBindingSource
+            // 
+            mutationPositionsBindingSource.DataMember = "MutationPositions";
+            mutationPositionsBindingSource.DataSource = modelNewPersonBindingSource1;
+            // 
+            // modelNewPersonBindingSource1
+            // 
+            modelNewPersonBindingSource1.DataSource = typeof(ModelNewPerson);
+            // 
+            // modelNewPersonBindingSource
+            // 
+            modelNewPersonBindingSource.DataSource = typeof(ModelNewPerson);
+            // 
+            // resultBindingSource
+            // 
+            resultBindingSource.DataSource = typeof(ModelOutput);
+            // 
+            // modelOutputBindingSource6
+            // 
+            modelOutputBindingSource6.DataSource = typeof(ModelOutput);
+            // 
+            // modelOutputBindingSource5
+            // 
+            modelOutputBindingSource5.DataSource = typeof(ModelNewPerson);
             // 
             // modelOutputBindingSource4
             // 
@@ -212,10 +261,6 @@ namespace WinFormsApp1
             // modelOutputBindingSource
             // 
             modelOutputBindingSource.DataSource = typeof(ModelOutput);
-            // 
-            // resultBindingSource
-            // 
-            resultBindingSource.DataSource = typeof(ModelOutput);
             // 
             // xREAL1DataGridViewTextBoxColumn
             // 
@@ -305,76 +350,147 @@ namespace WinFormsApp1
             xINT1DataGridViewTextBoxColumn3.Name = "xINT1DataGridViewTextBoxColumn3";
             xINT1DataGridViewTextBoxColumn3.Width = 173;
             // 
-            // Number
+            // crossPropability
             // 
-            Number.DataPropertyName = "Number";
-            Number.HeaderText = "Number";
-            Number.Name = "Number";
+            crossPropability.FormattingEnabled = true;
+            crossPropability.Items.AddRange(new object[] { "0", "0,10", "0,20", "0,40", "0,50", "0,60", "0,80", "0,90", "1" });
+            crossPropability.Location = new Point(743, 45);
+            crossPropability.Margin = new Padding(4, 5, 4, 5);
+            crossPropability.Name = "crossPropability";
+            crossPropability.Size = new Size(78, 33);
+            crossPropability.TabIndex = 13;
             // 
-            // X_REAL1
+            // mutationPropability
             // 
-            X_REAL1.DataPropertyName = "X_REAL1";
-            X_REAL1.FillWeight = 81.21826F;
-            X_REAL1.HeaderText = "X_REAL1";
-            X_REAL1.MinimumWidth = 8;
-            X_REAL1.Name = "X_REAL1";
+            mutationPropability.FormattingEnabled = true;
+            mutationPropability.Items.AddRange(new object[] { "0,1", "0,5", "0,01", "0,05", "0,001", "0,005" });
+            mutationPropability.Location = new Point(843, 44);
+            mutationPropability.Margin = new Padding(4, 5, 4, 5);
+            mutationPropability.Name = "mutationPropability";
+            mutationPropability.Size = new Size(78, 33);
+            mutationPropability.TabIndex = 14;
             // 
-            // functionXDataGridViewTextBoxColumn
+            // label5
             // 
-            functionXDataGridViewTextBoxColumn.DataPropertyName = "Function_X";
-            functionXDataGridViewTextBoxColumn.FillWeight = 112.761887F;
-            functionXDataGridViewTextBoxColumn.HeaderText = "Function_X";
-            functionXDataGridViewTextBoxColumn.MinimumWidth = 8;
-            functionXDataGridViewTextBoxColumn.Name = "functionXDataGridViewTextBoxColumn";
+            label5.AutoSize = true;
+            label5.Location = new Point(770, 15);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(32, 25);
+            label5.TabIndex = 15;
+            label5.Text = "pk";
             // 
-            // Function_G
+            // label6
             // 
-            Function_G.DataPropertyName = "Function_G";
-            Function_G.FillWeight = 112.761887F;
-            Function_G.HeaderText = "Function_G";
-            Function_G.MinimumWidth = 8;
-            Function_G.Name = "Function_G";
+            label6.AutoSize = true;
+            label6.Location = new Point(861, 15);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(39, 25);
+            label6.TabIndex = 16;
+            label6.Text = "pm";
             // 
-            // Function_P
+            // Nr
             // 
-            Function_P.DataPropertyName = "Function_P";
-            Function_P.FillWeight = 112.761887F;
-            Function_P.HeaderText = "Function_P";
-            Function_P.MinimumWidth = 8;
-            Function_P.Name = "Function_P";
+            Nr.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Nr.DataPropertyName = "Number";
+            Nr.FillWeight = 59.74279F;
+            Nr.HeaderText = "Nr";
+            Nr.MinimumWidth = 8;
+            Nr.Name = "Nr";
+            Nr.Resizable = DataGridViewTriState.False;
             // 
-            // Q
+            // X_REAL
             // 
-            Q.DataPropertyName = "Q";
-            Q.FillWeight = 112.761887F;
-            Q.HeaderText = "Q";
-            Q.MinimumWidth = 8;
-            Q.Name = "Q";
+            X_REAL.DataPropertyName = "X_REAL";
+            X_REAL.FillWeight = 59.9004631F;
+            X_REAL.HeaderText = "X_REAL";
+            X_REAL.MinimumWidth = 8;
+            X_REAL.Name = "X_REAL";
             // 
-            // R
+            // X_BIN
             // 
-            R.DataPropertyName = "R";
-            R.FillWeight = 112.761887F;
-            R.HeaderText = "R";
-            R.MinimumWidth = 8;
-            R.Name = "R";
+            X_BIN.DataPropertyName = "X_BIN";
+            X_BIN.FillWeight = 132.744247F;
+            X_BIN.HeaderText = "X_BIN";
+            X_BIN.MinimumWidth = 8;
+            X_BIN.Name = "X_BIN";
             // 
-            // Selection
+            // X_Parents
             // 
-            Selection.DataPropertyName = "Selection";
-            Selection.FillWeight = 112.761887F;
-            Selection.HeaderText = "Selection";
-            Selection.MinimumWidth = 8;
-            Selection.Name = "Selection";
+            X_Parents.DataPropertyName = "X_Parents";
+            X_Parents.FillWeight = 132.744247F;
+            X_Parents.HeaderText = "X_Parents";
+            X_Parents.MinimumWidth = 8;
+            X_Parents.Name = "X_Parents";
+            // 
+            // CutPosition
+            // 
+            CutPosition.DataPropertyName = "CutPosition";
+            CutPosition.FillWeight = 56.2665329F;
+            CutPosition.HeaderText = "Cut";
+            CutPosition.MinimumWidth = 8;
+            CutPosition.Name = "CutPosition";
+            // 
+            // ChildrenPopulation
+            // 
+            ChildrenPopulation.DataPropertyName = "X_Children_Population";
+            ChildrenPopulation.FillWeight = 132.744247F;
+            ChildrenPopulation.HeaderText = "Children";
+            ChildrenPopulation.MinimumWidth = 8;
+            ChildrenPopulation.Name = "ChildrenPopulation";
+            // 
+            // X_Crossed_Population
+            // 
+            X_Crossed_Population.DataPropertyName = "X_Crossed_Population";
+            X_Crossed_Population.FillWeight = 132.744247F;
+            X_Crossed_Population.HeaderText = "Crossed";
+            X_Crossed_Population.MinimumWidth = 8;
+            X_Crossed_Population.Name = "X_Crossed_Population";
+            // 
+            // MutationPositions
+            // 
+            MutationPositions.DataPropertyName = "MutationPositions";
+            MutationPositions.FillWeight = 52.6247368F;
+            MutationPositions.HeaderText = "Mutation Points";
+            MutationPositions.MinimumWidth = 8;
+            MutationPositions.Name = "MutationPositions";
+            // 
+            // X_Mutated_Population
+            // 
+            X_Mutated_Population.DataPropertyName = "X_Mutated_Population";
+            X_Mutated_Population.FillWeight = 132.744247F;
+            X_Mutated_Population.HeaderText = "Mutated";
+            X_Mutated_Population.MinimumWidth = 8;
+            X_Mutated_Population.Name = "X_Mutated_Population";
+            // 
+            // X_REAL_Mutated_Population
+            // 
+            X_REAL_Mutated_Population.DataPropertyName = "X_REAL_Mutated_Population";
+            X_REAL_Mutated_Population.FillWeight = 75F;
+            X_REAL_Mutated_Population.HeaderText = "Mutated X_Real";
+            X_REAL_Mutated_Population.MinimumWidth = 8;
+            X_REAL_Mutated_Population.Name = "X_REAL_Mutated_Population";
+            // 
+            // functionFDataGridViewTextBoxColumn
+            // 
+            functionFDataGridViewTextBoxColumn.DataPropertyName = "Function_F";
+            functionFDataGridViewTextBoxColumn.FillWeight = 132.744247F;
+            functionFDataGridViewTextBoxColumn.HeaderText = "Function_F";
+            functionFDataGridViewTextBoxColumn.MinimumWidth = 8;
+            functionFDataGridViewTextBoxColumn.Name = "functionFDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1083, 421);
+            ClientSize = new Size(1680, 702);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(mutationPropability);
+            Controls.Add(crossPropability);
             Controls.Add(dataGridView1);
             Controls.Add(Bytes);
-            Controls.Add(label5);
             Controls.Add(PopulationSize);
             Controls.Add(label4);
             Controls.Add(Precision);
@@ -384,18 +500,25 @@ namespace WinFormsApp1
             Controls.Add(A);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)A).EndInit();
             ((System.ComponentModel.ISupportInitialize)B).EndInit();
             ((System.ComponentModel.ISupportInitialize)PopulationSize).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mutationPositionsBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)modelNewPersonBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)resultBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource5).EndInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource4).EndInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)modelOutputBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)resultBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -410,7 +533,6 @@ namespace WinFormsApp1
         private ComboBox Precision;
         private NumericUpDown PopulationSize;
         private Label label4;
-        private Label label5;
         private Label Bytes;
         private ListBox listBox1;
         private DataGridView dataGridView1;
@@ -437,14 +559,26 @@ namespace WinFormsApp1
         private BindingSource modelOutputBindingSource2;
         private BindingSource modelOutputBindingSource3;
         private BindingSource modelOutputBindingSource4;
-        private DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn Number;
-        private DataGridViewTextBoxColumn X_REAL1;
-        private DataGridViewTextBoxColumn functionXDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn Function_G;
-        private DataGridViewTextBoxColumn Function_P;
-        private DataGridViewTextBoxColumn Q;
-        private DataGridViewTextBoxColumn R;
-        private DataGridViewTextBoxColumn Selection;
+        private ComboBox crossPropability;
+        private ComboBox mutationPropability;
+        private Label label5;
+        private Label label6;
+        private BindingSource modelOutputBindingSource5;
+        private BindingSource modelOutputBindingSource6;
+        private BindingSource modelNewPersonBindingSource;
+        private BindingSource modelNewPersonBindingSource1;
+        private BindingSource mutationPositionsBindingSource;
+        private BindingSource modelNewPersonBindingSource2;
+        private DataGridViewTextBoxColumn Nr;
+        private DataGridViewTextBoxColumn X_REAL;
+        private DataGridViewTextBoxColumn X_BIN;
+        private DataGridViewTextBoxColumn X_Parents;
+        private DataGridViewTextBoxColumn CutPosition;
+        private DataGridViewTextBoxColumn ChildrenPopulation;
+        private DataGridViewTextBoxColumn X_Crossed_Population;
+        private DataGridViewTextBoxColumn MutationPositions;
+        private DataGridViewTextBoxColumn X_Mutated_Population;
+        private DataGridViewTextBoxColumn X_REAL_Mutated_Population;
+        private DataGridViewTextBoxColumn functionFDataGridViewTextBoxColumn;
     }
 }

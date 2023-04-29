@@ -1,14 +1,14 @@
-﻿using MIO.Logic.Interfaces;
+﻿using WinFormsApp1.Logic.Interfaces;
 using WinFormsApp1.Models;
 
-namespace WinFormsApp1.Logic
+namespace WinFormsApp1.Logic.Classes
 {
     public class DataOperations_Ep1 : IDataOperations_Ep1
     {
         public int RealToInt(double X_REAL, int a, int b, int l, double D)
         {
             //wzór
-            var X_INT = (1 / ((double)b - (double)a)) * (X_REAL - a) * (Math.Pow(2, l) - 1);
+            var X_INT = 1 / (b - (double)a) * (X_REAL - a) * (Math.Pow(2, l) - 1);
             return Convert.ToInt32(Math.Round(X_INT / D) * D);
         }
         public string IntToBin(int X_INT, int l)
@@ -27,7 +27,7 @@ namespace WinFormsApp1.Logic
             //wzór
             var licznik = X_INT * (b - a);
             var mianownik = Math.Pow(2, l) - 1;
-            var X_REAL = (licznik / mianownik) + a;
+            var X_REAL = licznik / mianownik + a;
             return SetPrecision(X_REAL, D);
         }
         public double EvaluationFunction(double x)
@@ -39,13 +39,13 @@ namespace WinFormsApp1.Logic
         {
             Random rng = new Random();
             var number = rng.NextDouble() * (max - min) + min;
-            double newValue = Double.Parse(number.ToString());
+            double newValue = double.Parse(number.ToString());
             return SetPrecision(newValue, D);
         }
         public int Get_l(double d, int a, int b)
         {
             //wzór
-            var inside = (1 / d * (b - a) + 1);
+            var inside = 1 / d * (b - a) + 1;
             var l = Math.Ceiling(Math.Log2(inside));
             return Convert.ToInt32(l);
         }
